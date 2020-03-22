@@ -1,20 +1,26 @@
 # taylorized-training
 
 This repository contains code for training Taylorized neural networks from the paper
+
 [Taylorized Training: Towards Better Approximation of Neural Network Training at Finite Width.](https://arxiv.org/abs/2002.04010) 
 
 ## Prerequisites
 Requires Python >=3.6.
-1. Install tensorflow (>= 2.0.0), tensorflow_datasets (>= 2.0.0), tensorboardX (>= 2.0).
-2. Install jax (>=0.1.59, CUDA specification recommended) and neural_tangents (>= 0.1.7) following the instructions from:
 ```
-https://github.com/google/jax
-```
+# install tensorflow and tensorboard
+pip install tensorflow-gpu, tensorflow_datasets, tensorboardX
 
-```
-https://github.com/google/neural-tangents
-```
+# install jax
+PYTHON_VERSION=cp36  # alternatives: cp35, cp36, cp37, cp38
+CUDA_VERSION=cuda100  # alternatives: cuda90, cuda92, cuda100, cuda101
+PLATFORM=linux_x86_64  # alternatives: linux_x86_64
+BASE_URL='https://storage.googleapis.com/jax-releases'
+pip install --upgrade $BASE_URL/$CUDA_VERSION/jaxlib-0.1.37-$PYTHON_VERSION-none-$PLATFORM.whl
+pip install --upgrade jax  # install jax
 
+# install neural_tangents
+pip install neural_tangents
+```
 ## Training neural networks and their Taylorizations
 1. Train a 4-layer CNN with 128 channels per layer, saving the model parameters and test logits.
 ```
