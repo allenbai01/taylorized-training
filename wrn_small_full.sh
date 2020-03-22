@@ -1,0 +1,16 @@
+python taylorized_train.py \
+    --epochs 200 \
+    --init_seed 100 \
+    --model wideresnet --wideresnet_bs 2 --wideresnet_k 4 --wideresnet_channels 128 \
+    --loss logistic \
+    --parameterization standard \
+    --optimizer momentum --lr 0.03162 --momentum 0.0 --weight_decay 0.0 \
+    --lr_decay --decay_epoch 100 --decay_epoch_2 150 --decay_factor 0.1 \
+    --grad_norm_thresh 10 \
+    --batch_size_train 256 \
+    --batch_size_test 256 \
+    --logdir runs/WRNSMALL-lr-0.03162-clip-10-bs-256 \
+    --save_steps 200 \
+    --early_save_steps 25 \
+    --early_save_till_step 200 \
+    --save_path saved_models/WRNSMALL-lr-0.03162-clip-10-bs-256
