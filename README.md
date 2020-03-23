@@ -2,10 +2,10 @@
 
 This repository contains code for training Taylorized neural networks from the paper
 
-[Taylorized Training: Towards Better Approximation of Neural Network Training at Finite Width.](https://arxiv.org/abs/2002.04010) 
+[Taylorized Training: Towards Better Approximation of Neural Network Training at Finite Width](https://arxiv.org/abs/2002.04010) by Yu Bai, Ben Krause, Huan Wang, Caiming Xiong, and Richard Socher, 2020.
 
 ## Prerequisites
-Requires Python >=3.6.
+Requires Python >=3.6 and the following prerequisites.
 ```
 # install tensorflow and tensorboard
 pip install tensorflow-gpu, tensorflow_datasets, tensorboardX
@@ -21,6 +21,8 @@ pip install --upgrade jax  # install jax
 # install neural_tangents
 pip install neural_tangents
 ```
+Our code is written in [Jax](https://github.com/google/jax) and uses the Taylorization functionality from [Neural Tangents](https://github.com/google/neural-tangents). We currently require Tensorflow in addition for some (very light) data processing routines.
+
 ## Training neural networks and their Taylorizations
 1. Train a 4-layer CNN with 128 channels per layer, saving the model parameters and test logits.
 ```
