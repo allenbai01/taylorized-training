@@ -11,11 +11,12 @@ Requires Python >=3.6 and the following prerequisites.
 pip install tensorflow-gpu, tensorflow_datasets, tensorboardX
 
 # install jax
-PYTHON_VERSION=cp36  # alternatives: cp35, cp36, cp37, cp38
-CUDA_VERSION=cuda100  # alternatives: cuda90, cuda92, cuda100, cuda101
+# note: please check newest version number for jaxlib
+PYTHON_VERSION=cp36  # alternatives: cp36, cp37, cp38
+CUDA_VERSION=cuda100  # alternatives: cuda92, cuda100, cuda101, cuda102
 PLATFORM=linux_x86_64  # alternatives: linux_x86_64
 BASE_URL='https://storage.googleapis.com/jax-releases'
-pip install --upgrade $BASE_URL/$CUDA_VERSION/jaxlib-0.1.37-$PYTHON_VERSION-none-$PLATFORM.whl
+pip install --upgrade $BASE_URL/$CUDA_VERSION/jaxlib-0.1.42-$PYTHON_VERSION-none-$PLATFORM.whl
 pip install --upgrade jax  # install jax
 
 # install neural_tangents
