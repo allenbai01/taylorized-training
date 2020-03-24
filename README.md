@@ -4,6 +4,12 @@ This repository contains code for training Taylorized neural networks from the p
 
 [Taylorized Training: Towards Better Approximation of Neural Network Training at Finite Width](https://arxiv.org/abs/2002.04010) by Yu Bai, Ben Krause, Huan Wang, Caiming Xiong, and Richard Socher, 2020.
 
+## Introduction
+Taylorized training is to train the k-th order Taylor expansion of a neural network around its (random) initialization.
+
+An example use case of Taylorized training is as an empirical tool towards understanding the training dynamics of neural networks at finite width, in a way that extends the recently proposed theory of linearized training.
+
+
 ## Prerequisites
 Requires Python >=3.6 and the following prerequisites.
 ```
